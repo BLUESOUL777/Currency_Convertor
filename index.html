@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta http-equiv="X-Frame-Options" content="DENY">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' https://api.currencyapi.com; style-src 'self' https://cdnjs.cloudflare.com 'unsafe-inline'; font-src 'self' https://cdnjs.cloudflare.com">
+    <title>Currency Converter</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <i class="fa-solid fa-coins"></i>
+            <span>CurrencyPro</span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="#" class="active">Home</a></li>
+            <li><a href="#converter">Converter</a></li>
+            <li><a href="#login">Login</a></li>
+            <li><a href="#about">About</a></li>
+        </ul>
+        <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Convert Currencies in Real-Time</h1>
+            <p>Fast, reliable, and secure currency conversion at your fingertips</p>
+        </div>
+    </section>
+
+    <section id="converter" class="converter-section">
+        <div class="converter-container glass-effect">
+            <h2>Currency Converter</h2>
+            <div class="converter-form">
+                <div class="amount-container">
+                    <label for="amount">Amount</label>
+                    <input type="number" id="amount" placeholder="Enter amount" min="0" step="0.01">
+                </div>
+                <div class="currency-selectors">
+                    <div class="from-currency">
+                        <label for="from-currency">From</label>
+                        <select id="from-currency"></select>
+                    </div>
+                    <button class="swap-btn">
+                        <i class="fas fa-exchange-alt"></i>
+                    </button>
+                    <div class="to-currency">
+                        <label for="to-currency">To</label>
+                        <select id="to-currency"></select>
+                    </div>
+                </div>
+                <div class="result">
+                    <div class="exchange-rate">Exchange Rate: <span id="rate">--</span></div>
+                    <div class="converted-amount">
+                        <span id="converted-value">0.00</span>
+                        <span id="converted-currency">USD</span>
+                    </div>
+                </div>
+                <button class="convert-btn">Convert</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="login" class="login-section">
+        <div class="login-container glass-effect">
+            <h2>Login</h2>
+            <form class="login-form">
+                <div class="input-group">
+                    <input type="email" required>
+                    <label>Email</label>
+                </div>
+                <div class="input-group">
+                    <input type="password" required>
+                    <label>Password</label>
+                </div>
+                <button type="submit" class="login-btn">Login</button>
+                <a href="#" class="forgot-password">Forgot Password?</a>
+            </form>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <p>Email: info@currencypro.com</p>
+                <p>Phone: +91 9999 9999</p>
+            </div>
+            <div class="footer-section">
+                <h3>Follow Us</h3>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 CurrencyPro. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script type="module" src="script.js"></script>
+</body>
+</html> 
